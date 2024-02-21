@@ -1,6 +1,6 @@
 # 42 OAuth Express App
 
-This application demonstrates how to integrate with the 42 School's OAuth system to authenticate users and fetch data from the 42 API using their access tokens. It's built with Node.js and Express and uses Axios for making HTTP requests.
+Minimal express setup to play with 42 api
 
 ## Features
 
