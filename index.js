@@ -28,7 +28,8 @@ function readTokenFromFile() {
     const tokenString = fs.readFileSync(tokenFilePath);
     return JSON.parse(tokenString);
   } catch (error) {
-    console.error("Error reading token from file:", error);
+    if (error.code == 'ENOENT') console.log("AccessToken.json have not been generated yet")
+    else console.error("Error reading token from file:", error);
     return null;
   }
 }
