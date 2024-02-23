@@ -192,6 +192,7 @@ app.get("/tokenizer", checkToken, async (req, res) => {
 app.get("/me", checkToken, async (req, res) => {
   try {
     const response = await api("me", req.accessToken);
+    res.json(response.data)
   } catch (error) {
     console.error("Error fetching user info:", error);
     res.status(500).json({ error: error.message });
